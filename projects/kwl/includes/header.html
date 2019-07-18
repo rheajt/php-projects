@@ -1,0 +1,66 @@
+<?php 
+// Get some stuff started...
+ob_start();
+session_start();
+
+if (!isset($page_title)) {
+    $page_title = "Welcome";
+}
+ ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= $page_title ?></title>
+    
+    <!-- Add links to twitter bootstrap and fontawesome -->
+    <link href="includes/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Create the navbar for the page. Should react dynamically by users -->
+    <nav class="navbar navbar-invert">
+      <div class="container-fluid" id="nvbr">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/kwl/"><i class="fa fa-cubes"> KNOW/WANT/LEARN</i></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+<?php  
+if (isset($_SESSION['first_name'])) {
+    if ($_SESSION['role'] == 'teacher') {
+        echo '<li class="nvbr"><a href="teacher_profile.php">'. $_SESSION['first_name'] .' <span class="sr-only">(current)</span></a></li>'; 
+        echo '<li class="nvbr"><a href="new_kwl.php">New KWL Chart</a></li>';          
+    }
+    echo '<li class="nvbr"><a href="open_kwl.php">Open KWL Chart</a></li>';      
+    echo '<li class="nvbr"><a href="logout.php">Logout</a></li>';           
+} else {
+    echo '<li class="nvbr"><a href="login_page.php"><i class="fa fa-sign-in"></i> Login</a></li>';
+    echo '<li class="nvbr"><a href="register.php"><i class="fa fa-user-plus"></i> Register</a></li>';
+}
+
+
+
+
+?>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">About</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+    <!-- Begin page specific content -->

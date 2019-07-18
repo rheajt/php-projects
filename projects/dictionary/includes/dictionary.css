@@ -1,0 +1,14 @@
+.search-box {
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid purple;
+    border-radius: 25px;
+}
+
+.results-box {
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 25px;
+    display: none;
+}

@@ -1,0 +1,26 @@
+## Below are some common tags I use for web apps.
+
+### Basic Bootstrap stylesheet
+*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+### Bootstrap js file
+*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+### Bootstrap meta tags
+*<meta charset="utf-8">
+*<meta http-equiv="X-UA-Compatible" content="IE=edge">
+*<meta name="viewport" content="width=device-width, initial-scale=1">
+
+### Google hosted jquery
+*<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+### Google hosted jquery mobile (requires inclusion of above)
+*<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+*<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+### Google hosted jquery-ui
+*<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+*<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+### Font Awesome glyphs
+*<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

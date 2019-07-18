@@ -1,0 +1,22 @@
+<?php 
+
+session_start();
+
+// give the page a title in case it isn't set
+if (!isset($page_title)) {
+    $page_title = "Vocabulary List Generator";
+}
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= $page_title ?></title>
+    <link rel="stylesheet" href="includes/bootstrap.min.css">
+    <link rel="stylesheet" href="includes/dictionary.css">
+</head>
+<body>
+<!-- end of the header, begin page specific content -->
+
